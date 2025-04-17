@@ -1,31 +1,60 @@
 <script setup lang="ts">
-import { defineOptions, computed } from "vue";
-import {
-  // 消息气泡
-  Bubble,
-  // 发送框
-  Sender,
-} from "ant-design-x-vue";
+import { Bubble ,Sender} from "ant-design-x-vue";
+import { UserOutlined } from "@ant-design/icons-vue";
+import { Flex, Avatar } from "ant-design-vue";
+import type { CSSProperties } from "vue";
+import { h ,computed} from "vue";
+import { App, message } from 'ant-design-vue';
 
-defineOptions({ name: "SampleChat" });
+defineOptions({ name: "AXBubbleAvatarAndPlacementSetup" });
+// defineOptions({ name: 'AXSenderSubmitTypeSetup' });
 
-const messages = [
-  {
-    content: "Hello, Ant Design X Vue!",
-    role: "user",
-  },
-];
-const style = computed(() => ({
-  width: '256px',
+const [messageApi, contextHolder] = message.useMessage();
 
+const submit = () => {
+  messageApi.success('Send message successfully!'); 
+}
 
-}));
+const fooAvatar: CSSProperties = {
+  color: "#f56a00",
+  backgroundColor: "#fde3cf",
+};
+
+const barAvatar: CSSProperties = {
+  color: "#fff",
+  backgroundColor: "#87d068",
+};
+
+const hideAvatar: CSSProperties = {
+  visibility: "hidden",
+};
+
+const style = computed(()=>{
+  width:'512px'
+})
 </script>
 
 <template>
   <div class="main">
     <div class="chatContainer">
-      <Bubble.List :items="messages"  />
+      <Flex gap="middle" vertical>
+        <Bubble
+          placement="start"
+          content="Good morning, how are you?"
+          :avatar="{ icon: h(UserOutlined), style: fooAvatar }"
+        />
+        <Bubble placement="end" content="Hi, good morning, I'm fine!">
+          <template #avatar>
+            <Avatar :icon="h(UserOutlined)" :style="barAvatar" />
+          </template>
+        </Bubble>
+        <Bubble
+          placement="end"
+          content="Thank you!"
+          :styles="{ avatar: hideAvatar }"
+          :avatar="{}"
+        />
+      </Flex>
     </div>
     <div class="inputContainer" :style="style">
       <Sender />
@@ -37,17 +66,18 @@ const style = computed(() => ({
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #2b3442;
+  background-color: #f8f7f6;
   margin: 0;
 }
 .chatContainer {
   flex: 1;
-  background-color: #3f2a2a;
+  background-color: #f8f7f6;
   border-radius: 8px;
 }
 .inputContainer {
-  background-color: #7a2424;
+  background-color: #f8f7f6;
   border-radius: 8px;
-
+  align-self: center; /* 水平居中 */
+  margin: 20px;
 }
 </style>

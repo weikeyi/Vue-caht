@@ -17,7 +17,7 @@ const { token } = theme.useToken();
 
 const style = computed(() => ({
   // width: '256px',
-  // height: '100vh',
+  height: '100vh',
   background: token.value.colorBgContainer,
   borderRadius: token.value.borderRadius,
 }));
