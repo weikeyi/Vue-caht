@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import Home from './components/Home.vue'
+import Layout from './components/Layout.vue';
 </script>
 
 <template>
   <div>
-    <h1>111123232</h1>
+    <Layout/>
   </div>
-  <Home/>
+
 </template>
 
 <style scoped>

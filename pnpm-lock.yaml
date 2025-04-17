@@ -5,14 +5,20 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  ant-design-vue:
+    specifier: 4.0.0-rc.6
+    version: 4.0.0-rc.6(vue@3.5.13)
   ant-design-x-vue:
     specifier: ^1.1.0
-    version: 1.1.0(ant-design-vue@4.2.6)(vue@3.5.13)
+    version: 1.1.0(ant-design-vue@4.0.0-rc.6)(vue@3.5.13)
   vue:
     specifier: ^3.5.13
     version: 3.5.13(typescript@5.7.3)
 
 devDependencies:
+  '@ant-design/icons-vue':
+    specifier: ^7.0.1
+    version: 7.0.1(vue@3.5.13)
   '@vitejs/plugin-vue':
     specifier: ^5.2.2
     version: 5.2.3(vite@6.3.0)(vue@3.5.13)
@@ -38,7 +44,6 @@ packages:
     resolution: {integrity: sha512-qAZRvPzfdWHtfameEGP2Qvuf838NhergR35o+EuVyB5XvSA98xod5r4utvi4TJ3ywmevm290g9nsCG5MryrdWQ==, tarball: https://registry.npmmirror.com/@ant-design/colors/-/colors-6.0.0.tgz}
     dependencies:
       '@ctrl/tinycolor': 3.6.1
-    dev: false
 
   /@ant-design/fast-color@2.0.6:
     resolution: {integrity: sha512-y2217gk4NqL35giHl72o6Zzqji9O7vHh9YmhUVkPtAOpoTCH4uWxo/pr4VE8t0+ChEPs0qo4eJRC5Q1eXWo3vA==, tarball: https://registry.npmmirror.com/@ant-design/fast-color/-/fast-color-2.0.6.tgz}
@@ -49,6 +54,15 @@ packages:
 
   /@ant-design/icons-svg@4.4.2:
     resolution: {integrity: sha512-vHbT+zJEVzllwP+CM+ul7reTEfBR0vgxFe7+lREAsAA7YGsYpboiq2sQNeQeRvh09GfQgs/GyFEvZpJ9cLXpXA==, tarball: https://registry.npmmirror.com/@ant-design/icons-svg/-/icons-svg-4.4.2.tgz}
+
+  /@ant-design/icons-vue@6.1.0(vue@3.5.13):
+    resolution: {integrity: sha512-EX6bYm56V+ZrKN7+3MT/ubDkvJ5rK/O2t380WFRflDcVFgsvl3NLH7Wxeau6R8DbrO5jWR6DSTC3B6gYFp77AA==, tarball: https://registry.npmmirror.com/@ant-design/icons-vue/-/icons-vue-6.1.0.tgz}
+    peerDependencies:
+      vue: '>=3.0.3'
+    dependencies:
+      '@ant-design/colors': 6.0.0
+      '@ant-design/icons-svg': 4.4.2
+      vue: 3.5.13(typescript@5.7.3)
     dev: false
 
   /@ant-design/icons-vue@7.0.1(vue@3.5.13):
@@ -59,7 +73,7 @@ packages:
       '@ant-design/colors': 6.0.0
       '@ant-design/icons-svg': 4.4.2
       vue: 3.5.13(typescript@5.7.3)
-    dev: false
+    dev: true
 
   /@babel/helper-string-parser@7.25.9:
     resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==, tarball: https://registry.npmmirror.com/@babel/helper-string-parser/-/helper-string-parser-7.25.9.tgz}
@@ -93,7 +107,6 @@ packages:
   /@ctrl/tinycolor@3.6.1:
     resolution: {integrity: sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==, tarball: https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz}
     engines: {node: '>=10'}
-    dev: false
 
   /@emotion/hash@0.9.2:
     resolution: {integrity: sha512-MyqliTZGuOm3+5ZRSaaBGP3USLw6+EGykkwZns2EPC5g8jJ4z9OrdZY9apkl3+UP9+sdz76YYkwCKP5gh8iY3g==, tarball: https://registry.npmmirror.com/@emotion/hash/-/hash-0.9.2.tgz}
@@ -662,14 +675,14 @@ packages:
     resolution: {integrity: sha512-OGj9yyTnJEttvzhTUWuscOvtqxq5vrhF7vL9oS0xJ2mK0ItPYP1/y+vCFebfxoEyAz0++1AIwJ5CMr+Fk3nDmg==, tarball: https://registry.npmmirror.com/alien-signals/-/alien-signals-1.0.13.tgz}
     dev: true
 
-  /ant-design-vue@4.2.6(vue@3.5.13):
-    resolution: {integrity: sha512-t7eX13Yj3i9+i5g9lqFyYneoIb3OzTvQjq9Tts1i+eiOd3Eva/6GagxBSXM1fOCjqemIu0FYVE1ByZ/38epR3Q==, tarball: https://registry.npmmirror.com/ant-design-vue/-/ant-design-vue-4.2.6.tgz}
+  /ant-design-vue@4.0.0-rc.6(vue@3.5.13):
+    resolution: {integrity: sha512-j+GAhgC1p1+nmQVbaEeY2miZ1h+8jBLlxTESX93MwcshVaYTkZNhiyddtl92VvEDJTedzuX+1oT3TP5wG/+tHg==, tarball: https://registry.npmmirror.com/ant-design-vue/-/ant-design-vue-4.0.0-rc.6.tgz}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       vue: '>=3.2.0'
     dependencies:
       '@ant-design/colors': 6.0.0
-      '@ant-design/icons-vue': 7.0.1(vue@3.5.13)
+      '@ant-design/icons-vue': 6.1.0(vue@3.5.13)
       '@babel/runtime': 7.27.0
       '@ctrl/tinycolor': 3.6.1
       '@emotion/hash': 0.9.2
@@ -693,7 +706,7 @@ packages:
       warning: 4.0.3
     dev: false
 
-  /ant-design-x-vue@1.1.0(ant-design-vue@4.2.6)(vue@3.5.13):
+  /ant-design-x-vue@1.1.0(ant-design-vue@4.0.0-rc.6)(vue@3.5.13):
     resolution: {integrity: sha512-0P3qqpP6BxsbOUkkY5oZIojvS1Pka3rnsGtfWSxf842HvmuRXUXqeEm9XLdu+gRYupuyHKPu2ra7aggHEy4ziA==, tarball: https://registry.npmmirror.com/ant-design-x-vue/-/ant-design-x-vue-1.1.0.tgz}
     peerDependencies:
       ant-design-vue: '>=4.0.0'
@@ -702,7 +715,7 @@ packages:
       '@ant-design/fast-color': 2.0.6
       '@emotion/hash': 0.9.2
       '@emotion/unitless': 0.10.0
-      ant-design-vue: 4.2.6(vue@3.5.13)
+      ant-design-vue: 4.0.0-rc.6(vue@3.5.13)
       classnames: 2.5.1
       csstype: 3.1.3
       stylis: 4.3.6
