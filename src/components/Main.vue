@@ -12,7 +12,7 @@ defineOptions({ name: "AXBubbleAvatarAndPlacementSetup" });
 const [messageApi, contextHolder] = message.useMessage();
 
 const submit = () => {
-  messageApi.success('Send message successfully!'); 
+  
 }
 
 const fooAvatar: CSSProperties = {
@@ -29,9 +29,9 @@ const hideAvatar: CSSProperties = {
   visibility: "hidden",
 };
 
-const style = computed(()=>{
+const style = computed(()=>({
   width:'512px'
-})
+}))
 </script>
 
 <template>
